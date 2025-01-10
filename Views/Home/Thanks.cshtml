@@ -1,0 +1,31 @@
+﻿@model Peokutse.Models.Guest
+
+@{
+    ViewBag.Title = "Thanks";
+}
+
+<div>
+    <p> Tänan sind, @Model.Name </p>
+</div>
+
+<div>
+    @if (Model.WillAttend == true)
+    {
+        <p>Ootan sind kallis sõber!</p>
+        <p>
+            <img src="~/Images/like.jpg" />
+        </p>
+
+      
+    }
+    else
+    {
+        <p>Väga kurb uudis. Näeme hiljem!</p>
+        <p>
+            <img src="~/Images/kurb.jpg" />
+        </p>
+    }
+
+    <p>@ViewBag.Message</p>
+    <p>@ViewBag.ReminderMessage</p>  <!-- Сообщение о статусе отправки напоминания -->
+</div>
